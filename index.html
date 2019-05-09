@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>
+<meta charset="utf-8">
+<title>La Leyenda de Sheily</title>
+
+<style>
+#stage
+{
+	position: relative;
+	margin: 12px;
+	width: 700px;
+	height: 1098px;
+	background-image: url("GBCimages/gb.png");
+	
+}
+
+.cell
+{
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+}
+
+#btnCenter
+{
+	position: absolute;
+	width: 99px;
+	height: 90px;
+	top: 720px;
+	left: 325px;
+	background-image: url(GBCimages/center.png);
+}
+
+#btnUp
+{
+	position: absolute;
+	width: 99px;
+	height: 148px;
+	top: 600px;
+	left: 325px;
+	background-image: url(GBCimages/up.png);
+}
+
+#btnDown
+{
+	position: absolute;
+	width: 99px;
+	height: 147px;
+	top: 780px;
+	left: 325px;
+	background-image: url(GBCimages/down.png);
+}
+
+#btnLeft
+{
+	position: absolute;
+	width: 163px;
+	height: 91px;
+	top: 720px;
+	left: 195px;
+	background-image: url(GBCimages/left.png);
+}
+
+#btnRight
+{
+	position: absolute;
+	width: 162px;
+	height: 90px;
+	top: 720px;
+	left: 395px;
+	background-image: url(GBCimages/right.png);
+}
+
+#floor1
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/floor1.png");
+}
+
+#floor2
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/floor2.png");
+}
+
+#floor3
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/floor3.png");
+}
+
+#floor4
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/floor4.png");
+}
+
+#floor42
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/floor42.png");
+}
+
+#Carta1
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 45px;
+	left: 141px;
+	background-image: url("GBCimages/cartaUno.png");
+}
+
+#Carta2
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/cartaFinal.png");
+}
+
+#Sheily
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/Title.gif");
+}
+
+#OverScreen
+{
+	position: absolute;
+	width: 448px;
+	height: 448px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/gameOver.png");
+}
+
+#Heart1Full
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/cLleno.png");
+}
+
+#Heart1Medio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/cMedio.png");
+}
+
+#Heart1Vacio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 141px;
+	background-image: url("GBCimages/cVacio.png");
+}
+
+#Heart2Full
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 205px;
+	background-image: url("GBCimages/cLleno.png");
+}
+
+#Heart2Medio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 205px;
+	background-image: url("GBCimages/cMedio.png");
+}
+
+#Heart2Vacio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 205px;
+	background-image: url("GBCimages/cVacio.png");
+}
+
+#Heart3Full
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 269px;
+	background-image: url("GBCimages/cLleno.png");
+}
+
+#Heart3Medio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 269px;
+	background-image: url("GBCimages/cMedio.png");
+}
+
+#Heart3Vacio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 269px;
+	background-image: url("GBCimages/cVacio.png");
+}
+
+#Heart4Full
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 333px;
+	background-image: url("GBCimages/cLleno.png");
+}
+
+#Heart4Medio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 333px;
+	background-image: url("GBCimages/cMedio.png");
+}
+
+#Heart4Vacio
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 333px;
+	background-image: url("GBCimages/cVacio.png");
+}
+
+#Sobre1
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 397px;
+	background-image: url("GBCimages/Sobre.png");
+}
+
+#Llave
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 461px;
+	background-image: url("GBCimages/Llave.png");
+}
+
+#Sobre2
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 525px;
+	background-image: url("GBCimages/Sobre.png");
+}
+
+#Inventario1
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 397px;
+	background-image: url("GBCimages/inventario.png");
+}
+
+#Inventario2
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 461px;
+	background-image: url("GBCimages/inventario.png");
+}
+
+#Inventario3
+{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	top: 58px;
+	left: 525px;
+	background-image: url("GBCimages/inventario.png");
+}
+
+</style>
+
+<div id="floor1"></div>
+<div id="floor2"></div>
+<div id="floor3"></div>
+<div id="floor4"></div>
+<div id="floor42"></div>
+
+<div id="stage"></div>
+
+<div id="btnUp"></div>
+<div id="btnDown"></div>
+<div id="btnLeft"></div>
+<div id="btnRight"></div>
+<div id="btnCenter"></div>
+
+<div id="Heart1Vacio"></div>
+<div id="Heart2Vacio"></div>
+<div id="Heart3Vacio"></div>
+<div id="Heart4Vacio"></div>
+<div id="Heart1Medio"></div>
+<div id="Heart2Medio"></div>
+<div id="Heart3Medio"></div>
+<div id="Heart4Medio"></div>
+<div id="Heart1Full"></div>
+<div id="Heart2Full"></div>
+<div id="Heart3Full"></div>
+<div id="Heart4Full"></div>
+<div id="Sobre1"></div>
+<div id="Llave"></div>
+<div id="Sobre2"></div>
+<div id="Inventario1"></div>
+<div id="Inventario2"></div>
+<div id="Inventario3"></div>
+
+<div id="Sheily"></div>
+<div id="Carta1"></div>
+<div id="Carta2"></div>
+<div id="OverScreen"></div>
+	
+<script>
+var stage = document.querySelector("#stage");
+
+var map1 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 00, 04, 07, 04, 10, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[04, 00, 04, 00, 04, 00, 05],
+	[00, 04, 00, 04, 00, 04, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[04, 04, 04, 00, 04, 04, 04]
+];
+
+var map2 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 00, 06, 07, 06, 00, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 04, 00, 00, 00, 04, 05],
+	[04, 04, 04, 00, 00, 04, 00],
+	[00, 04, 00, 00, 05, 05, 00],
+	[00, 00, 00, 00, 00, 00, 00]
+];
+
+var map3 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 04, 04, 80, 04, 04, 00],
+	[05, 00, 04, 00, 04, 00, 04],
+	[00, 05, 00, 00, 00, 04, 00],
+	[00, 00, 05, 05, 04, 00, 00],
+	[00, 05, 00, 00, 00, 05, 00],
+	[00, 04, 00, 00, 00, 04, 00]
+];
+
+var map4 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[01, 04, 01, 80, 01, 04, 01],
+	[00, 04, 00, 00, 00, 04, 00],
+	[00, 04, 05, 05, 05, 04, 00],
+	[00, 04, 00, 04, 00, 04, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[01, 00, 00, 00, 00, 00, 01]
+];
+
+var map5 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[81, 06, 81, 06, 80, 06, 81],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 00, 00, 01, 00, 00, 00],
+	[01, 00, 00, 10, 00, 00, 01],
+	[00, 00, 00, 00, 00, 00, 00],
+	[06, 00, 00, 00, 00, 00, 06]
+];
+
+var map6 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 00, 00, 00, 01, 07, 01],
+	[00, 00, 00, 00, 00, 00, 00],
+	[04, 00, 00, 05, 00, 00, 00],
+	[03, 05, 02, 05, 00, 00, 00],
+	[04, 00, 00, 05, 00, 00, 00],
+	[00, 00, 00, 00, 00, 00, 00]
+];
+
+var map7 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[01, 01, 01, 07, 01, 01, 01],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 01, 00, 12, 00, 01, 02],
+	[02, 02, 02, 00, 00, 01, 00],
+	[00, 01, 00, 00, 02, 02, 00],
+	[00, 00, 00, 00, 00, 00, 00]
+];
+
+var map8 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 00, 01, 00, 00, 01, 80],
+	[00, 01, 00, 00, 01, 00, 00],
+	[00, 00, 01, 00, 00, 02, 00],
+	[00, 02, 00, 00, 01, 00, 00],
+	[00, 00, 01, 00, 00, 01, 00],
+	[00, 01, 00, 00, 01, 00, 00]
+];
+
+var map9 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 00, 12, 00, 00, 12, 07],
+	[00, 12, 00, 00, 12, 00, 00],
+	[00, 00, 12, 00, 00, 13, 00],
+	[00, 13, 00, 00, 12, 00, 00],
+	[00, 00, 12, 00, 00, 12, 00],
+	[00, 12, 00, 00, 12, 00, 00]
+];
+
+var map10 =
+[
+	[14, 14, 14, 14, 14, 14, 14],
+	[14, 01, 06, 00, 06, 01, 14],
+	[14, 00, 00, 00, 00, 00, 14],
+	[14, 00, 00, 10, 00, 00, 14],
+	[14, 01, 00, 00, 00, 01, 14],
+	[14, 14, 00, 00, 00, 14, 14],
+	[14, 14, 00, 00, 00, 14, 14]
+];
+
+var map0 =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[00, 00, 00, 00, 00, 00, 00]
+];
+
+
+var lv1Objects =
+[
+	[0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 9, 0, 0, 0]
+];
+
+///////////////////////Mapa de reserva
+var map1B =
+[
+	[04, 04, 04, 04, 04, 04, 04],
+	[00, 00, 04, 07, 04, 10, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[04, 00, 04, 00, 04, 00, 05],
+	[00, 04, 00, 04, 00, 04, 00],
+	[00, 00, 00, 00, 00, 00, 00],
+	[04, 04, 04, 00, 04, 04, 04]
+];
+
+//Map stuff
+//var tile0 = 0;
+var torch = 1;
+var mTorch = 2;
+var noTorch = 3;
+var bloque = 4;
+var bMovil1 = 5;
+var estatua = 6;
+var door0 = 7;
+var door1 = 80;
+var door1False = 81;
+var chest0 = 10;
+var chest1 = 11;
+var fantasma = 12;
+var fantasmaFalse = 13;
+var invisibleWall = 14;
+
+var p1 = 9;
+var p1Row;
+var p1Column;
+
+var SIZE = 64;
+var ROWS = map1.length;
+var COLUMNS = map1[0].length;
+
+
+var f1 = document.querySelector("#floor1");
+var f2 = document.querySelector("#floor2");
+var f3 = document.querySelector("#floor3");
+var f4 = document.querySelector("#floor4");
+var f42 = document.querySelector("#floor42");
+f1.style.display = "block";
+f2.style.display = "none";
+f3.style.display = "none";
+f4.style.display = "none";
+f42.style.display = "none";
+
+var btnC = document.querySelector("#btnCenter");
+var btnU = document.querySelector("#btnUp");
+var btnD = document.querySelector("#btnDown");
+var btnL = document.querySelector("#btnLeft");
+var btnR = document.querySelector("#btnRight");
+//btnC.addEventListener("click", cheet, false);
+btnU.addEventListener("click", goUp, false);
+btnD.addEventListener("click", goDown, false);
+btnL.addEventListener("click", goLeft, false);
+btnR.addEventListener("click", goRight, false);
+
+var heart1Full = document.querySelector("#Heart1Full");
+var heart2Full = document.querySelector("#Heart2Full");
+var heart3Full = document.querySelector("#Heart3Full");
+var heart4Full = document.querySelector("#Heart4Full");
+var heart1Medio = document.querySelector("#Heart1Medio");
+var heart2Medio = document.querySelector("#Heart2Medio");
+var heart3Medio = document.querySelector("#Heart3Medio");
+var heart4Medio = document.querySelector("#Heart4Medio");
+var inventario1 = document.querySelector("#Inventario1");
+var inventario2 = document.querySelector("#Inventario2");
+var inventario3 = document.querySelector("#Inventario3");
+var sobre1 = document.querySelector("#Sobre1");
+var sobre2 = document.querySelector("#Sobre2");
+sobre1.addEventListener("click", inv1, false);
+sobre2.addEventListener("click", inv2, false);
+//heart1Full.style.display = "none";
+//inventario2.style.display = "none";
+//inventario3.style.display = "none";
+
+var title = document.querySelector("#Sheily");
+var overScreen = document.querySelector("#OverScreen");
+var carta1 = document.querySelector("#Carta1");
+var carta2 = document.querySelector("#Carta2");
+title.style.display = "block";
+carta1.style.display = "none";
+carta2.style.display = "none";
+overScreen.style.display = "none";
+carta1.addEventListener("click", clickCarta1, false);
+carta2.addEventListener("click", clickCarta2, false);
+
+var gameLevel = 1;
+var gameSteps = 1;
+var gameStatus = "Off";
+var p1Direction = "down";
+var hasKey = false;
+
+function startGame()
+{
+	//loop and find p1 position
+	for(var row = 0; row < ROWS; row++)
+	{
+		for (var column = 0; column < COLUMNS; column++)
+		{
+			if(lv1Objects[row][column] === p1)
+			{
+				p1Row = row;
+				p1Column = column;
+			}
+			if(map1[row][column] === bMovil1)
+			{
+				bMovil1Row = row;
+				bMovil1Column = column;
+			}
+		}
+	}
+	
+	render();
+	gameStatus = "On";
+	title.style.display = "none";
+}
+
+function cheet()
+{
+	nextLevel();
+	console.log(gameLevel);
+	render();
+}
+
+function clickCarta1()
+{
+	carta1.style.display = "none";
+}
+
+function inv2()
+{
+	carta2.style.display = "block";
+	//TODO add buttons
+	
+}
+
+function clickCarta2()
+{
+	carta2.style.display = "none";
+}
+
+function inv1()
+{
+	carta1.style.display = "block";
+}
+
+function goUp()
+{
+	if(gameStatus === "On")
+	{
+		p1Direction = "up";
+		if(p1Row > 0)
+		{
+			gameSteps++;
+			lv1Objects[p1Row][p1Column] = 0;
+			p1Row--;
+			//aplicar nueva ubicación en array
+			lv1Objects[p1Row][p1Column] = p1;
+			tracing();
+			render();
+		}
+	}
+	if(gameStatus === "Off")
+	{
+		startGame();
+	}
+}
+
+function goDown()
+{
+	if(gameStatus === "On")
+	{
+		p1Direction = "down";
+		if(p1Row < ROWS - 1)
+		{
+			gameSteps++;
+			lv1Objects[p1Row][p1Column] = 0;
+			p1Row++;
+			lv1Objects[p1Row][p1Column] = p1;
+			tracing();
+			render();
+		}
+	}
+	if(gameStatus === "Off")
+	{
+		startGame();
+	}
+}
+
+function goLeft()
+{
+	if(gameStatus === "On")
+	{
+		p1Direction = "left";
+		if(p1Column > 0)
+		{
+			gameSteps++;
+			lv1Objects[p1Row][p1Column] = 0;
+			p1Column--;
+			lv1Objects[p1Row][p1Column] = p1;
+			tracing();
+			render();
+		}
+	}
+	if(gameStatus === "Off")
+	{
+		startGame();
+	}
+}
+
+function goRight()
+{
+	if(gameStatus === "On")
+	{
+		p1Direction = "right";
+		if(p1Column < COLUMNS - 1)
+		{
+			gameSteps++;
+			lv1Objects[p1Row][p1Column] = 0;
+			p1Column++;
+			lv1Objects[p1Row][p1Column] = p1;
+			tracing();
+			render();
+		}
+	}
+	if(gameStatus === "Off")
+	{
+		startGame();
+	}
+}
+
+function tracing()
+{
+	switch(map1[p1Row][p1Column])
+	{
+		case bloque:
+			block();
+			break;
+			
+		case bMovil1:
+			moveBlock();
+			break;
+						
+		case door0:
+			block();
+			break;
+		
+		case door1:
+			nextLevel();
+			break;
+			
+		case door1False:
+			gameOver();
+			break;
+			
+		case fantasma:
+			gameOver();
+			break;
+			
+		case torch:
+			block();
+			break;
+			
+		case mTorch:
+			moveTorch();
+			break;
+			
+		case noTorch:
+			block();
+			break;
+		
+		case chest0:
+			blockChest();
+			break;
+			
+		case chest1:
+			block();
+			break;
+		
+		case estatua:
+			block();
+			break;
+		
+		case invisibleWall:
+			block();
+			break;
+	}	
+}
+
+function block()
+{
+	if(p1Direction === "up")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row++;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(p1Direction === "down")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row--;
+		//aplicar nueva ubicación en array
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(p1Direction === "left")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column++;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(p1Direction === "right")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	
+	if(gameLevel === 9 && hasKey && lv1Objects[2][6] === p1)
+	{
+		map1[1][6] = 80;
+	}
+}
+
+function blockChest()
+{
+	map1[p1Row][p1Column] = 0;
+	map1[p1Row][p1Column] = chest1;
+	
+	if(gameLevel === 1)
+	{
+		inventario1.style.display = "none";
+		carta1.style.display = "block";
+		map1[1][3] = 0;
+		map1[1][3] = door1;
+	}
+	else if(gameLevel === 5)
+	{
+		inventario2.style.display = "none";
+		hasKey = true;
+	}
+	else if(gameLevel === 10)
+	{
+		inventario3.style.display = "none";
+	}
+
+	if(p1Direction === "up")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row++;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(p1Direction === "down")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row--;
+		//aplicar nueva ubicación en array
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(p1Direction === "left")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column++;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(p1Direction === "right")
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+}
+
+function moveBlock()
+{
+	if(p1Direction === "up")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row - 1][p1Column] = bloque;
+	}
+	if(p1Direction === "down")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row + 1][p1Column] = bloque;
+	}
+	if(p1Direction === "left")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row][p1Column - 1] = bloque;
+	}
+	if(p1Direction === "right")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row][p1Column + 1] = bloque;
+	}
+	
+	//Puzzles con bloques
+	if(gameLevel === 2 && map1[5][5] === 4)
+	{
+		map1[5][5] = 5;
+		map1[5][4] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	
+	if(gameLevel === 2 && map1[4][4] === 4 && map1[4][6] === 4)
+	{
+		map1[1][3] = 80;
+	}
+	
+	if(gameLevel === 3 && map1[5][0] === 4 && map1[4][3] === 4 && map1[3][3] !== 4)
+	{
+		map1[4][3] = 5;
+		map1[4][2] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(gameLevel === 3 && map1[3][2] === 4 && map1[4][3] !== 5 && map1[3][3] !== 4)
+	{
+		map1[4][4] = 4;
+		map1[4][3] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(gameLevel === 3 && map1[5][2] === 4 && map1[4][3] !== 5 && map1[3][3] !== 4)
+	{
+		map1[4][4] = 4;
+		map1[4][3] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	
+	if(gameLevel === 4 && map1[2][2] === 4 && map1[3][4] === 4 && map1[2][4] !== 4)
+	{
+		map1[3][3] = 5;
+		map1[3][4] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(gameLevel === 4 && map1[3][2] === 4 && map1[2][4] === 4 && map1[2][2] !== 4)
+	{
+		map1[3][2] = 5;
+		map1[3][3] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column++;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	
+	if(gameLevel === 6 && map1[4][3] === 4 && map1[3][3] === 5)
+	{
+		map1[4][3] = 5;
+		map1[5][3] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row++;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(gameLevel === 6 && map1[4][3] === 4 && map1[5][3] === 5)
+	{
+		map1[4][3] = 5;
+		map1[3][3] = 5;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+}
+
+function moveTorch()
+{
+	if(p1Direction === "up")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row - 1][p1Column] = torch;
+	}
+	if(p1Direction === "down")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row + 1][p1Column] = torch;
+	}
+	if(p1Direction === "left")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row][p1Column - 1] = torch;
+	}
+	if(p1Direction === "right")
+	{
+		map1[p1Row][p1Column] = 0;
+		map1[p1Row][p1Column + 1] = torch;
+	}
+	
+	//Puzzles con antorchas
+	if(gameLevel === 6 && map1[4][1] === 1)
+	{
+		map1[4][0] = 1;
+		map1[1][5] = 80;
+	}
+	
+	if(gameLevel === 7 && map1[5][5] === 1)
+	{
+		map1[5][5] = 2;
+		map1[5][4] = 2;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column--;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(gameLevel === 7 && map1[4][1] === 1)
+	{
+		map1[4][1] = 2;
+		map1[4][2] = 2;
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Column++;
+		lv1Objects[p1Row][p1Column] = p1;
+	}
+	if(gameLevel === 7 && map1[3][0] === 1 && map1[5][2] === 1)
+	{
+		map1[1][3] = 80;
+	}
+	
+
+}
+
+function nextLevel()
+{
+	if(gameLevel === 1)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		//p1Row += 4;
+		//p1Column -= 2;
+		p1Row = 6;
+		p1Column = 3;
+		lv1Objects[p1Row][p1Column] = p1;
+		
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map2[row][column];
+			}
+		}
+		gameLevel++;
+	}
+	
+	else if(gameLevel === 2)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 3;
+		lv1Objects[p1Row][p1Column] = p1;
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map3[row][column];
+			}
+		}
+		gameLevel++;
+	}
+	
+	else if(gameLevel === 3)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 3;
+		lv1Objects[p1Row][p1Column] = p1;
+		f1.style.display = "none";
+		f2.style.display = "block";
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map4[row][column];
+			}
+		}
+		gameLevel++;
+	}
+	
+	else if(gameLevel === 4)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 3;
+		lv1Objects[p1Row][p1Column] = p1;
+		f2.style.display = "none";
+		f42.style.display = "block";
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map5[row][column];
+			}
+		}
+		gameLevel++;
+	}
+	
+	else if(gameLevel === 5)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 3;
+		lv1Objects[p1Row][p1Column] = p1;
+		f42.style.display = "none";
+		f2.style.display = "block";
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map6[row][column];
+			}
+		}
+		gameLevel++;
+	}
+
+	else if(gameLevel === 6)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 3;
+		lv1Objects[p1Row][p1Column] = p1;
+		f2.style.display = "none";
+		f3.style.display = "block";
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map7[row][column];
+			}
+		}
+		gameLevel++;
+	}
+	
+	else if(gameLevel === 7)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 0;
+		lv1Objects[p1Row][p1Column] = p1;
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map8[row][column];
+			}
+		}
+		gameLevel++;
+	}
+	
+	else if(gameLevel === 8)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 0;
+		lv1Objects[p1Row][p1Column] = p1;
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map9[row][column];
+			}
+		}
+		gameLevel++;
+	}
+	
+	else if(gameLevel === 9)
+	{
+		lv1Objects[p1Row][p1Column] = 0;
+		p1Row = 6;
+		p1Column = 3;
+		lv1Objects[p1Row][p1Column] = p1;
+		f3.style.display = "none";
+		f4.style.display = "block";
+
+		for(var row = 0; row < ROWS; row++)
+		{
+			for (var column = 0; column < COLUMNS; column++)
+			{
+				map1[row][column] = 0;
+				map1[row][column] = map10[row][column];
+			}
+		}
+		gameLevel++;
+	}
+}//fin nextLevel
+
+function gameOver()
+{
+	overScreen.style.display = "block";
+	btnU.addEventListener("click", restore, false);
+	btnD.addEventListener("click", restore, false);
+	btnL.addEventListener("click", restore, false);
+	btnR.addEventListener("click", restore, false);
+}
+
+function restore()
+{
+	gameLevel = 1;
+	gameSteps = 0;
+	hasKey = false;
+	console.log(gameLevel);
+	overScreen.style.display = "none";
+	inventario1.style.display = "block";
+	inventario2.style.display = "block";
+	inventario3.style.display = "block";
+	
+	lv1Objects[p1Row][p1Column] = 0;
+	p1Row = 6;
+	p1Column = 3;
+	lv1Objects[p1Row][p1Column] = p1;
+	f1.style.display = "block";
+	f2.style.display = "none";
+	f3.style.display = "none";
+	f4.style.display = "none";
+	f42.style.display = "none";
+	heart4Full.style.display = "block";
+	heart4Medio.style.display = "block";
+	heart3Full.style.display = "block";
+	heart3Medio.style.display = "block";
+	heart2Full.style.display = "block";
+	heart2Medio.style.display = "block";
+	heart1Full.style.display = "block";
+	heart1Medio.style.display = "block";
+
+	for(var row = 0; row < ROWS; row++)
+	{
+		for (var column = 0; column < COLUMNS; column++)
+		{
+			map1[row][column] = 0;
+			map1[row][column] = map1B[row][column];
+		}
+	}
+	
+	btnU.removeEventListener("click", restore, false);
+	btnD.removeEventListener("click", restore, false);
+	btnL.removeEventListener("click", restore, false);
+	btnR.removeEventListener("click", restore, false);
+	
+	render();
+}
+
+function render()
+{
+	console.log(gameSteps);
+	//clear stage from the previous turn (img tag cells)
+	if(stage.hasChildNodes())
+	{
+		for(var i = 0; i < ROWS * COLUMNS; i++)
+		{
+			stage.removeChild(stage.firstChild);
+		}
+	}
+		
+	//looping
+	for(var row = 0; row < ROWS; row++)
+	{
+		for(var column = 0; column < COLUMNS; column++)
+		{
+			//create a div HTML
+			var cell = document.createElement("img");
+			//set css class to cell
+			cell.setAttribute("class", "cell");
+			//addChild
+			stage.appendChild(cell);
+			
+			//elementos map1 (estáticos)
+			switch(map1[row][column])
+			{
+				case bloque:
+					cell.src = "GBCimages/bloque.png";
+					break;
+								
+				case bMovil1:
+					cell.src = "GBCimages/bloque.png";
+					break;
+					
+				case door0:
+					cell.src = "GBCimages/door0.png";
+					break;
+					
+				case door1:
+					cell.src = "GBCimages/door1.png";
+					break;
+					
+				case door1False:
+					cell.src = "GBCimages/door1.png";
+					break;
+					
+				case torch:
+					cell.src = "GBCimages/torchOn.gif";
+					break;
+					
+				case mTorch:
+					cell.src = "GBCimages/torchOn.gif";
+					break;
+				
+				case noTorch:
+					cell.src = "GBCimages/torchOff.png";
+					break;
+					
+				case chest0:
+					cell.src = "GBCimages/chest0.png";
+					break;
+					
+				case chest1:
+					cell.src = "GBCimages/chest1.png";
+					break;
+					
+				case estatua:
+					cell.src = "GBCimages/estatua.png";
+					break;
+					
+				case fantasma:
+					cell.src = "GBCimages/fantasma.gif";
+					break;
+					
+				case fantasmaFalse:
+					cell.src = "GBCimages/fantasma.gif";
+					break;
+			}
+			
+			//lv1Obects (dinámicos)
+			switch(lv1Objects[row][column])
+			{
+				case p1:
+					if(p1Direction === "down")
+					{
+						cell.src = "GBCimages/p1Down.gif";
+					}
+					if(p1Direction === "up")
+					{
+						cell.src = "GBCimages/p1Up.gif";
+					}
+					if(p1Direction === "left")
+					{
+						cell.src = "GBCimages/p1Left.gif";
+					}
+					if(p1Direction === "right")
+					{
+						cell.src = "GBCimages/p1Right.gif";
+					}				
+					break;
+			}
+		
+			//Posicionando
+			cell.style.top = 58 + row * SIZE + "px";
+			cell.style.left = 134 + column * SIZE + "px";
+		}
+	}
+	
+	if(gameSteps === 20)
+	{
+		heart4Full.style.display = "none";
+	}
+	if(gameSteps === 40)
+	{
+		heart4Medio.style.display = "none";
+	}
+	if(gameSteps === 60)
+	{
+		heart3Full.style.display = "none";
+	}
+	if(gameSteps === 80)
+	{
+		heart3Medio.style.display = "none";
+	}
+	if(gameSteps === 100)
+	{
+		heart2Full.style.display = "none";
+	}
+	if(gameSteps === 120)
+	{
+		heart2Medio.style.display = "none";
+	}
+	if(gameSteps === 140)
+	{
+		heart1Full.style.display = "none";
+	}
+	if(gameSteps === 160)
+	{
+		heart3Medio.style.display = "none";
+		gameOver();
+	}
+	
+	
+
+}//fin render
+
+</script>
